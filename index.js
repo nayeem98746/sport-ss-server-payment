@@ -23,10 +23,10 @@ app.post('/init',async(req, res) => {
         total_amount: 100,
         currency: 'BDT',
         tran_id: uuidv4(),
-        success_url: 'http://localhost:5000/success',
-        fail_url: 'http://localhost:5000/fail',
-        cancel_url: 'http://localhost:5000/cancel',
-        ipn_url: 'http://localhost:5000/ipn',
+        success_url: 'https://floating-thicket-25144.herokuapp.com/success',
+        fail_url: 'https://floating-thicket-25144.herokuapp.com/fail',
+        cancel_url: 'https://floating-thicket-25144.herokuapp.com/cancel',
+        ipn_url: 'https://floating-thicket-25144.herokuapp.com/ipn',
         shipping_method: 'Courier',
         paymentStatus:'pending',
         product_name: req.body.product_name,
@@ -79,15 +79,15 @@ app.post('/init',async(req, res) => {
 
 app.post('/success' , async(req, res) => {
     console.log(req.body);
-    res.status(200).redirect('http://localhost:3000/success')
+    res.status(200).redirect('https://sports-club-70293.web.app/success')
 })
 app.post('/fail' , async(req, res) => {
     console.log(req.body);
-    res.status(200).redirect('http://localhost:3000/home')
+    res.status(200).redirect('https://sports-club-70293.web.app/home')
 })
 app.post('/cancel' , async(req, res) => {
     console.log(req.body);
-    res.status(200).redirect('http://localhost:3000/home')})
+    res.status(200).redirect('https://sports-club-70293.web.app/home')})
 
 
 
